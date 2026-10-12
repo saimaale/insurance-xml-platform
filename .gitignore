@@ -75,5 +75,4 @@ Sai_Santosh_*.pdf
 # ──────────────────────────────────────────────────────────────────────────────
 *.zip
 ingestion/sample_xml/logs/
-ingestion/glue_jobs/--job-name
 .claude/
