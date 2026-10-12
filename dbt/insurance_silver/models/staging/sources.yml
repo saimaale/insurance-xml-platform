@@ -1,0 +1,168 @@
+version: 2
+
+sources:
+  - name: bronze
+    description: >
+      Bronze layer: raw Iceberg tables shredded from commercial auto insurance
+      XMLs by the AWS Glue XML shredder job. Surrogate-key parent-child hierarchy.
+      id/code/value pattern used for all coded XML nodes.
+    database: awsdatacatalog
+    schema: insurance_bronze
+
+    tables:
+
+      - name: br_policy_transaction
+        description: Root node — one row per XML file (one per transaction).
+        columns:
+          - name: policy_transaction_sk
+            tests: [not_null, unique]
+          - name: transaction_id
+            tests: [not_null, unique]
+          - name: transaction_type_code
+            tests: [not_null]
+          - name: transaction_seq_num
+          - name: policy_term_count
+          - name: endorsement_type_code
+          - name: endorsement_type_value
+          - name: transaction_type_value
+          - name: source_file_name
+            tests: [not_null]
+          - name: source_load_ts
+
+      - name: br_policy_transaction_policy
+        description: PolicyTransactionPolicy — one row per XML file.
+        columns:
+          - name: policy_transaction_policy_sk
+            tests: [not_null, unique]
+          - name: policy_transaction_sk
+            tests: [not_null]
+          - name: transaction_id
+          - name: policy_number
+            tests: [not_null]
+          - name: agency_legal_name
+          - name: agency_number
+          - name: naic_code
+          - name: policy_effective_date
+          - name: policy_expiration_date
+          - name: quote_number
+          - name: term_effective_date
+          - name: term_expiration_date
+          - name: transaction_effective_date
+          - name: transaction_completed_date
+          - name: primary_risk_state_code
+          - name: primary_risk_state_value
+          - name: source_file_name
+          - name: source_load_ts
+
+      - name: br_policy_auto
+        description: PolicyAuto — one row per XML file.
+        columns:
+          - name: policy_auto_sk
+            tests: [not_null, unique]
+          - name: policy_transaction_policy_sk
+            tests: [not_null]
+          - name: transaction_id
+          - name: policy_number
+          - name: greatest_driver_number
+          - name: greatest_vehicle_number
+          - name: total_number_of_drivers
+          - name: total_number_of_vehicles
+          - name: private_passenger_vehicle_count
+          - name: source_file_name
+          - name: source_load_ts
+
+      - name: br_policy_auto_jurisdiction
+        description: PolicyAutoJurisdiction — one row per XML file.
+        columns:
+          - name: policy_auto_jurisdiction_sk
+            tests: [not_null, unique]
+          - name: policy_auto_sk
+            tests: [not_null]
+          - name: transaction_id
+          - name: policy_number
+          - name: state_code_code
+          - name: state_code_value
+          - name: source_file_name
+          - name: source_load_ts
+
+      - name: br_policy_auto_location
+        description: PolicyAutoLocation — one row per XML file.
+        columns:
+          - name: policy_auto_location_sk
+            tests: [not_null, unique]
+          - name: policy_auto_jurisdiction_sk
+            tests: [not_null]
+          - name: transaction_id
+          - name: policy_number
+          - name: city_name
+          - name: delivery_address
+          - name: state
+          - name: zip_code
+          - name: source_file_name
+          - name: source_load_ts
+
+      - name: br_policy_auto_vehicle
+        description: PolicyAutoVehicle — one row per vehicle per transaction.
+        columns:
+          - name: policy_auto_vehicle_sk
+            tests: [not_null, unique]
+          - name: policy_auto_sk
+            tests: [not_null]
+          - name: transaction_id
+          - name: policy_number
+          - name: covered_item_number
+          - name: covered_item_identifier
+            tests: [not_null]
+          - name: vehicle_change_type_code
+          - name: busines_operation_group
+          - name: vehicle_type
+          - name: vehicle_make
+          - name: vehicle_model
+          - name: vehicle_model_year
+          - name: source_file_name
+          - name: source_load_ts
+
+      - name: br_object_coverage_information
+        description: >
+          ObjectCoverageInformation rows. parent_type='jurisdiction' or 'vehicle'.
+          parent_sk references the parent surrogate key.
+        columns:
+          - name: object_coverage_information_sk
+            tests: [not_null, unique]
+          - name: parent_sk
+            tests: [not_null]
+          - name: parent_type
+            tests:
+              - not_null
+              - accepted_values:
+                  arguments:
+                    values: ['jurisdiction', 'vehicle']
+          - name: transaction_id
+          - name: policy_number
+          - name: covered_item_identifier
+          - name: coverage_group_code
+          - name: coverage_type
+          - name: coverage_change_type_code
+          - name: coverage_effective_date
+          - name: coverage_expiration_date
+          - name: source_file_name
+          - name: source_load_ts
+
+      - name: br_object_coverage_attribute
+        description: ObjectCoverageAttribute — key/value pairs per coverage.
+        columns:
+          - name: object_coverage_attribute_sk
+            tests: [not_null, unique]
+          - name: object_coverage_information_sk
+            tests: [not_null]
+          - name: transaction_id
+          - name: policy_number
+          - name: covered_item_identifier
+          - name: coverage_group_code
+          - name: coverage_attribute_tag_name
+          - name: coverage_attribute_type
+          - name: coverage_attribute_value_text
+          - name: coverage_attribute_value_number
+          - name: coverage_attribute_change_type_code
+          - name: source_file_name
+          - name: source_load_ts

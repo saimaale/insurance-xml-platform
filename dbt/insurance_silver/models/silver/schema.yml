@@ -1,0 +1,205 @@
+version: 2
+
+models:
+
+  # ---------------------------------------------------------------------------
+  - name: sl_policy
+    description: >
+      Silver policy table — SCD Type 2.
+      One row per distinct business-attribute version per policy term.
+      Grain: (policy_number, policy_term_count, transaction_seq_num).
+      SCD2 key: (policy_number, policy_term_count).
+      Renewal terms coexist: both is_current=true simultaneously at different
+      policy_term_count values.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - policy_number
+            - policy_term_count
+            - transaction_seq_num
+    columns:
+      - name: policy_number
+        description: Business key for the policy.
+        tests: [not_null]
+      - name: policy_term_count
+        description: Policy term number. Increments on each renewal.
+        tests: [not_null]
+      - name: transaction_seq_num
+        description: Global incrementing sequence number across all terms.
+        tests: [not_null]
+      - name: policy_transaction_sk
+        description: Surrogate key from Bronze policy_transaction table.
+        tests: [not_null]
+      - name: policy_transaction_policy_sk
+        description: Surrogate key from Bronze policy_transaction_policy table.
+        tests: [not_null]
+      - name: policy_auto_sk
+        description: Surrogate key from Bronze policy_auto table.
+        tests: [not_null]
+      - name: transaction_id
+        description: Source system transaction identifier.
+        tests: [not_null]
+      - name: transaction_type_code
+        description: Type of transaction (e.g. NB, EN, RN, CA).
+        tests: [not_null]
+      - name: is_current
+        description: True for the latest active version of this policy term.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: effective_from_dt
+        description: Date this SCD2 version became active.
+        tests: [not_null]
+      - name: effective_to_dt
+        description: Date this SCD2 version was superseded. NULL for current rows.
+      - name: row_hash
+        description: MD5 hash of business attributes used to detect changes.
+        tests: [not_null]
+
+  # ---------------------------------------------------------------------------
+  - name: sl_vehicle
+    description: >
+      Silver vehicle table — SCD Type 2.
+      One row per distinct vehicle attribute version per policy term.
+      Grain: (policy_number, policy_term_count, covered_item_identifier,
+              transaction_seq_num).
+      SCD2 key: (policy_number, policy_term_count, covered_item_identifier).
+      policy_term_count and transaction_seq_num carried from sl_policy via
+      the Bronze surrogate key (policy_auto_sk).
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - policy_number
+            - policy_term_count
+            - covered_item_identifier
+            - transaction_seq_num
+    columns:
+      - name: policy_number
+        tests: [not_null]
+      - name: policy_term_count
+        tests: [not_null]
+      - name: covered_item_identifier
+        description: Business identifier for the vehicle on this policy.
+        tests: [not_null]
+      - name: transaction_seq_num
+        tests: [not_null]
+      - name: policy_auto_vehicle_sk
+        description: Surrogate key from Bronze policy_auto_vehicle table.
+        tests: [not_null]
+      - name: vehicle_change_type_code
+        description: Whether this vehicle was Added, Changed, or Deleted in this transaction.
+      - name: is_current
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: effective_from_dt
+        tests: [not_null]
+      - name: effective_to_dt
+        description: NULL for current rows.
+      - name: row_hash
+        tests: [not_null]
+
+  # ---------------------------------------------------------------------------
+  - name: sl_vehicle_coverage
+    description: >
+      Silver vehicle coverage table — SCD Type 2.
+      One row per distinct coverage version per vehicle per policy term.
+      Grain: (policy_number, policy_term_count, covered_item_identifier,
+              coverage_group_code, transaction_seq_num).
+      SCD2 key: (policy_number, policy_term_count, covered_item_identifier,
+                 coverage_group_code).
+      Active coverages: is_current=true AND coverage_change_type_code != 'Deleted'.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - policy_number
+            - policy_term_count
+            - covered_item_identifier
+            - coverage_group_code
+            - transaction_seq_num
+    columns:
+      - name: policy_number
+        tests: [not_null]
+      - name: policy_term_count
+        tests: [not_null]
+      - name: covered_item_identifier
+        tests: [not_null]
+      - name: coverage_group_code
+        description: Coverage type identifier (e.g. COMP, COLL, LIAB).
+        tests: [not_null]
+      - name: transaction_seq_num
+        tests: [not_null]
+      - name: coverage_change_type_code
+        description: >
+          Current status of this coverage in this version.
+          Added = newly added, NoChange = unchanged from prior,
+          Changed = attribute modified, Deleted = removed from policy.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Added', 'NoChange', 'Changed', 'Deleted']
+      - name: per_accident_limit_amount
+        description: Per-accident limit in dollars.
+      - name: deductible_amount
+        description: Deductible in dollars.
+      - name: is_current
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: effective_from_dt
+        tests: [not_null]
+      - name: effective_to_dt
+        description: NULL for current rows.
+      - name: row_hash
+        tests: [not_null]
+
+  # ---------------------------------------------------------------------------
+  - name: sl_jurisdiction_coverage
+    description: >
+      Silver jurisdiction coverage table — SCD Type 2.
+      One row per distinct jurisdiction-level coverage version per policy term.
+      Grain: (policy_number, policy_term_count, coverage_group_code,
+              transaction_seq_num).
+      SCD2 key: (policy_number, policy_term_count, coverage_group_code).
+      Active coverages: is_current=true AND coverage_change_type_code != 'Deleted'.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - policy_number
+            - policy_term_count
+            - coverage_group_code
+            - transaction_seq_num
+    columns:
+      - name: policy_number
+        tests: [not_null]
+      - name: policy_term_count
+        tests: [not_null]
+      - name: coverage_group_code
+        tests: [not_null]
+      - name: transaction_seq_num
+        tests: [not_null]
+      - name: coverage_change_type_code
+        description: >
+          Current status of this coverage in this version.
+          Added = newly added, NoChange = unchanged from prior,
+          Changed = attribute modified, Deleted = removed from policy.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Added', 'NoChange', 'Changed', 'Deleted']
+      - name: per_accident_limit_amount
+        description: Per-accident limit in dollars.
+      - name: is_current
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: effective_from_dt
+        tests: [not_null]
+      - name: effective_to_dt
+        description: NULL for current rows.
+      - name: row_hash
+        tests: [not_null]

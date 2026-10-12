@@ -1,0 +1,576 @@
+<PolicyTransaction>
+  <countrynotunitedstateind>
+    <id>2</id>
+    <code>2</code>
+    <value>No</value>
+  </countrynotunitedstateind>
+  <EndorsementType>
+    <id>1</id>
+    <code>VehicleAdd</code>
+    <value>Vehicle Add</value>
+  </EndorsementType>
+  <PolicyTermCount>1</PolicyTermCount>
+  <RBCorrelationServiceid>_RB304377683730</RBCorrelationServiceid>
+  <TransactionSeqNum>2</TransactionSeqNum>
+  <TransactionType>
+    <id>2</id>
+    <code>Endorsement</code>
+    <value>Endorsement</value>
+  </TransactionType>
+  <PolicyTransactionPolicy>
+    <AgencyLegalName>Apex Coverage Co</AgencyLegalName>
+    <AgencyNumber>PP0997</AgencyNumber>
+    <inceptionDate>20201010000000</inceptionDate>
+    <NAICCode>64758</NAICCode>
+    <PolicyEffectiveDate>20260601000000</PolicyEffectiveDate>
+    <PolicyExpirationDate>20270101000000</PolicyExpirationDate>
+    <PolicyNumber>P10000010</PolicyNumber>
+    <PrimaryRiskState>
+     <id>1</id>
+     <code>IL</code>
+     <value>Illinois</value>
+    </PrimaryRiskState>
+    <QuoteNumber>Q64950799</QuoteNumber>
+    <TermEffectiveDate>20260601000000</TermEffectiveDate>
+    <TermExpirationDate>20270101000000</TermExpirationDate>
+    <TransactionCompletedDate>20260517000000</TransactionCompletedDate>
+    <TransactionEffectiveDate>20260601000000</TransactionEffectiveDate>
+    <PolicyAuto>
+      <GreatestDriverNumber>1</GreatestDriverNumber>
+      <GreatestVehicleNumber>6</GreatestVehicleNumber>
+      <TotalNumberOfDrivers>1</TotalNumberOfDrivers>
+      <TotalNumberOfVehicles>6</TotalNumberOfVehicles>
+      <PrivatePassengerVehicleCount>3</PrivatePassengerVehicleCount>
+      <PolicyAutoJurisdiction>
+        <StateCode>
+         <id>1</id>
+         <code>IL</code>
+         <value>Illinois</value>
+        </StateCode>
+        <PolicyAutoLocation>
+         <Addressgroup>
+          <id>1</id>
+          <code>PhysicalAddress</code>
+          <value>Physical Address</value>
+         </Addressgroup>
+         <CityName>Chicago</CityName>
+         <DeliveryAddress>4738 Oak Ave</DeliveryAddress>
+         <State>IL</State>
+         <ZipCode>60601</ZipCode>
+        </PolicyAutoLocation>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>AutoCombSingleLimit</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageAffordedCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PrimaryBasis</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>Liability</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>PerAccidentLimitType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PerAccident</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>PerAccidentLimitBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>LimitDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>PerAccidentLimitAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>1000000</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>EmployeesNonOwned</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageAffordedCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PrimaryBasis</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>Liability</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>PerAccidentLimitType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PerAccident</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>PerAccidentLimitBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>LimitDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>PerAccidentLimitAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>2000000</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>EmpNonOwnNumberOfEmployees</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>20</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+      </PolicyAutoJurisdiction>
+      <PolicyAutoVehicle>
+       <BusinesOperationGroup>Janitorial and Cleaning Services</BusinesOperationGroup>
+       <CoveredItemNumber>1</CoveredItemNumber>
+       <CoveredItemIdentifier>c0df9967-664-5aa2b</CoveredItemIdentifier>
+       <VehicleChangeTypeCode>NoChange</VehicleChangeTypeCode>
+       <VehicleType>Pickup Truck</VehicleType>
+       <VehicleMake>CHEVROLET</VehicleMake>
+       <VehicleModel>Traverse Premier</VehicleModel>
+       <VehicleModelyear>2024</VehicleModelyear>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Comprehensive</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>500</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Collision</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>1000</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+      </PolicyAutoVehicle>
+      <PolicyAutoVehicle>
+       <BusinesOperationGroup>Janitorial and Cleaning Services</BusinesOperationGroup>
+       <CoveredItemNumber>2</CoveredItemNumber>
+       <CoveredItemIdentifier>2804b7dc-601-9824e</CoveredItemIdentifier>
+       <VehicleChangeTypeCode>NoChange</VehicleChangeTypeCode>
+       <VehicleType>Box Truck</VehicleType>
+       <VehicleMake>CHEVROLET</VehicleMake>
+       <VehicleModel>Colorado</VehicleModel>
+       <VehicleModelyear>2023</VehicleModelyear>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Comprehensive</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>2500</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Collision</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>500</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+      </PolicyAutoVehicle>
+      <PolicyAutoVehicle>
+       <BusinesOperationGroup>Janitorial and Cleaning Services</BusinesOperationGroup>
+       <CoveredItemNumber>3</CoveredItemNumber>
+       <CoveredItemIdentifier>d129e6eb-175-6ee64</CoveredItemIdentifier>
+       <VehicleChangeTypeCode>NoChange</VehicleChangeTypeCode>
+       <VehicleType>Passenger Car</VehicleType>
+       <VehicleMake>HONDA</VehicleMake>
+       <VehicleModel>Odyssey</VehicleModel>
+       <VehicleModelyear>2015</VehicleModelyear>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Comprehensive</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>1000</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Collision</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>1000</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+      </PolicyAutoVehicle>
+      <PolicyAutoVehicle>
+       <BusinesOperationGroup>Janitorial and Cleaning Services</BusinesOperationGroup>
+       <CoveredItemNumber>4</CoveredItemNumber>
+       <CoveredItemIdentifier>74930d2b-567-01bd1</CoveredItemIdentifier>
+       <VehicleChangeTypeCode>NoChange</VehicleChangeTypeCode>
+       <VehicleType>Pickup Truck</VehicleType>
+       <VehicleMake>MERCEDES-BENZ</VehicleMake>
+       <VehicleModel>Metris</VehicleModel>
+       <VehicleModelyear>2024</VehicleModelyear>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Comprehensive</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>500</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Collision</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>1000</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+      </PolicyAutoVehicle>
+      <PolicyAutoVehicle>
+       <BusinesOperationGroup>Janitorial and Cleaning Services</BusinesOperationGroup>
+       <CoveredItemNumber>5</CoveredItemNumber>
+       <CoveredItemIdentifier>e054acee-508-318b2</CoveredItemIdentifier>
+       <VehicleChangeTypeCode>NoChange</VehicleChangeTypeCode>
+       <VehicleType>SUV</VehicleType>
+       <VehicleMake>HONDA</VehicleMake>
+       <VehicleModel>Ridgeline</VehicleModel>
+       <VehicleModelyear>2022</VehicleModelyear>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Comprehensive</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>5000</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>NoChange</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Collision</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>5000</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>NoChange</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+      </PolicyAutoVehicle>
+      <PolicyAutoVehicle>
+       <BusinesOperationGroup>Janitorial and Cleaning Services</BusinesOperationGroup>
+       <CoveredItemNumber>6</CoveredItemNumber>
+       <CoveredItemIdentifier>e7b71f00-121-f3e60</CoveredItemIdentifier>
+       <VehicleChangeTypeCode>Added</VehicleChangeTypeCode>
+       <VehicleType>SUV</VehicleType>
+       <VehicleMake>RAM</VehicleMake>
+       <VehicleModel>ProMaster 2500</VehicleModel>
+       <VehicleModelyear>2024</VehicleModelyear>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>Added</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Comprehensive</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>Added</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>5000</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>Added</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>Added</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>Added</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+        <ObjectCoverageInformation>
+         <CoverageChangeTypeCode>Added</CoverageChangeTypeCode>
+         <CoverageEffectiveDate>20260601000000</CoverageEffectiveDate>
+         <CoverageExpirationDate>20270101000000</CoverageExpirationDate>
+         <CoverageGroupCode>Collision</CoverageGroupCode>
+         <CoverageType>Rated</CoverageType>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>Added</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleAmount</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueNumber>1000</CoverageAttributeValueNumber>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>Added</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>BureauCoverageType</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>PhysicalDamage</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>Added</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>DeductibleBasis</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>DeductibleDollar</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+         <ObjectCoverageAttribute>
+           <CoverageAttributeChangeTypeCode>Added</CoverageAttributeChangeTypeCode>
+           <CoverageAttributeTagName>CoverageRiskLevelCode</CoverageAttributeTagName>
+           <CoverageAttributeType>Coverage Option</CoverageAttributeType>
+           <CoverageAttributeValueText>CoveredItem</CoverageAttributeValueText>
+         </ObjectCoverageAttribute>
+        </ObjectCoverageInformation>
+      </PolicyAutoVehicle>
+    </PolicyAuto>
+  </PolicyTransactionPolicy>
+</PolicyTransaction>

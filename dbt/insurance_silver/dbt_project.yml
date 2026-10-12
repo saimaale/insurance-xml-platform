@@ -1,0 +1,34 @@
+name: "insurance_silver"
+version: "1.0.0"
+config-version: 2
+
+# Which profile (in profiles.yml) to use
+profile: "insurance_silver"
+
+# Directory layout
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+seed-paths: ["seeds"]
+analysis-paths: ["analyses"]
+snapshot-paths: ["snapshots"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+# ---------------------------------------------------------------------------
+# Model-level defaults
+# ---------------------------------------------------------------------------
+models:
+  insurance_silver:
+    staging:
+      +materialized: view         # staging = lightweight view over Bronze
+      +schema: insurance_bronze   # reads FROM Bronze Glue database
+    silver:
+      +materialized: incremental  # Silver = incremental SCD2 (merge strategy)
+      +schema: insurance_silver   # writes TO silver Glue database
+      +s3_data_dir: s3://ins-xml-dev-silver/dbt/
+    gold:
+      +materialized: table        # Gold = persisted Parquet table
+      +schema: insurance_gold     # writes TO gold Glue database
+      +s3_data_dir: s3://ins-xml-dev-silver/gold/
+

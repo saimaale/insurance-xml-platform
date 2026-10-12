@@ -1,0 +1,25 @@
+# ---------------------------------------------------------------------------
+# dbt profiles.yml — Athena connection
+#
+# SECURITY NOTE: In production, this file lives at ~/.dbt/profiles.yml
+# (outside the repo) so credentials never get committed to git.
+# This copy is kept here for portfolio/documentation purposes only.
+# Add profiles.yml to .gitignore in a real project!
+# ---------------------------------------------------------------------------
+
+insurance_silver:
+  target: dev
+  outputs:
+    dev:
+      type: athena
+      region_name: us-east-1
+      s3_staging_dir: s3://ins-xml-dev-athena-results/dbt/
+      database: awsdatacatalog          # Glue Data Catalog (always this value for Athena)
+      schema: insurance_silver          # Glue database where Silver tables land
+      work_group: insurance-wg          # Athena workgroup we created in Terraform
+      threads: 4                        # Parallel model execution
+      aws_profile_name: default         # matches your ~/.aws/credentials profile
+
+      # Iceberg table support (required for Silver tables)
+      lf_tags_database: null
+      lf_tags_table: null

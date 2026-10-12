@@ -1,0 +1,89 @@
+version: 2
+
+models:
+
+  # ---------------------------------------------------------------------------
+  - name: gl_policy_premium_summary
+    description: >
+      Gold policy summary. One row per policy per term (current state only).
+      Aggregates vehicle counts, active coverage counts, and limit totals from
+      Silver current rows. Primary source for portfolio-level reporting.
+      Grain: (policy_number, policy_term_count).
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - policy_number
+            - policy_term_count
+    columns:
+      - name: policy_number
+        tests: [not_null]
+      - name: policy_term_count
+        tests: [not_null]
+      - name: transaction_seq_num
+        description: Latest transaction sequence number for this term.
+        tests: [not_null]
+      - name: transaction_type_code
+        description: Most recent transaction type (e.g. NB, EN, RN, CA).
+        tests: [not_null]
+      - name: agency_legal_name
+        tests: [not_null]
+      - name: primary_risk_state_code
+        tests: [not_null]
+      - name: declared_vehicles
+        description: Total distinct vehicles on the policy (including deleted).
+        tests: [not_null]
+      - name: active_vehicles
+        description: Vehicles not in Deleted status.
+        tests: [not_null]
+      - name: distinct_coverages
+        description: Total distinct coverage types across all vehicles (including deleted).
+      - name: active_coverages
+        description: Coverage rows where coverage_change_type_code != Deleted.
+      - name: total_per_accident_limit
+        description: Sum of per_accident_limit_amount across all active vehicle coverages.
+      - name: avg_limit_per_vehicle
+        description: total_per_accident_limit divided by active vehicle count.
+
+  # ---------------------------------------------------------------------------
+  - name: gl_fleet_risk_profile
+    description: >
+      Gold fleet risk profile. One row per vehicle per policy term (current state only).
+      Combines vehicle attributes with coverage summary for underwriting analysis.
+      Grain: (policy_number, policy_term_count, covered_item_identifier).
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - policy_number
+            - policy_term_count
+            - covered_item_identifier
+    columns:
+      - name: policy_number
+        tests: [not_null]
+      - name: policy_term_count
+        tests: [not_null]
+      - name: covered_item_identifier
+        tests: [not_null]
+      - name: transaction_seq_num
+        tests: [not_null]
+      - name: vehicle_make
+        tests: [not_null]
+      - name: vehicle_model
+        tests: [not_null]
+      - name: vehicle_model_year
+        tests: [not_null]
+      - name: vehicle_type
+        tests: [not_null]
+      - name: garaging_state
+        tests: [not_null]
+      - name: active_coverage_count
+        description: Number of non-Deleted coverages on this vehicle.
+      - name: deleted_coverage_count
+        description: Number of Deleted coverages on this vehicle.
+      - name: total_per_accident_limit
+        description: Sum of per_accident_limit_amount across all coverages for this vehicle.
+      - name: per_accident_limit_amount
+        description: Per-accident limit (pivoted from vehicle coverage).
+      - name: deductible_amount
+        description: Deductible amount (pivoted from vehicle coverage).
+      - name: coverage_change_type_code
+        description: Coverage status of the primary coverage for this vehicle.
